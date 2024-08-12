@@ -11,15 +11,21 @@ public:
     
     void add_element(int value)
     {
-        if (arr == nullptr) throw std::exception("You're not make the array!");
-        else if (counter == size) throw std::exception("You fill in the array, that's enough");
+        if (arr == nullptr)
+        {
+            throw std::exception("You're not make the array!");
+        } 
+        else if (counter == size)
+        {
+            throw std::exception("You fill in the array, that's enough");
+        }
         arr[counter] = value;
         counter++;
 
     }
     int get_element(int index)
     {
-        if (index >= size || index < 0)
+        if (index >= counter || index < 0)
         {
             throw std::exception("Going outside the array");
         };
